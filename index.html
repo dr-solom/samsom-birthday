@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>عيد ميلاد سمسوم 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#5a1740;--rose:#ff5c8a;--gold:#f6b93b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden}
+body{background:radial-gradient(circle at 50% 30%,#3b1252,#1d0a2e 70%);font-family:'Amiri',serif;color:#fff;-webkit-tap-highlight-color:transparent;user-select:none}
+#scene{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2vh;transition:transform 1.6s ease-in,opacity 1.6s;cursor:pointer;padding:16px}
+#scene.leave{transform:translateY(130vh);opacity:0;pointer-events:none}
+#title{font-family:'Aref Ruqaa',serif;font-size:clamp(26px,6vw,52px);text-align:center;color:var(--gold);text-shadow:0 0 18px #f6b93b88;min-height:1.6em}
+#title.en{font-family:'Great Vibes',cursive;direction:ltr;font-size:clamp(34px,8vw,72px);color:#fff;text-shadow:0 0 22px #ff5c8a;animation:pop .8s}
+#cake{width:min(86vw,62vh,460px);height:auto;overflow:visible}
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:flick .25s infinite alternate;filter:drop-shadow(0 0 6px #ffb347)}
+.out .flame{animation:none;opacity:0;transform:scale(.1);transition:.5s}
+.smoke{opacity:0}
+.out .smoke{animation:smoke 2.2s ease-out}
+@keyframes flick{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.9,1.12) rotate(3deg)}}
+@keyframes smoke{0%{opacity:.8;transform:translateY(0)}100%{opacity:0;transform:translateY(-40px)}}
+@keyframes pop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+#card{position:fixed;left:50%;top:50%;width:min(92vw,620px);max-height:88vh;overflow:auto;transform:translate(-50%,-50%) scale(.2);opacity:0;pointer-events:none;transition:transform 1.2s cubic-bezier(.2,1.4,.4,1),opacity 1s;background:linear-gradient(160deg,#fff0f6,#ffd6e7 55%,#ffe9c7);color:var(--ink);border-radius:26px;padding:clamp(22px,5vw,44px);text-align:center;border:5px double var(--rose);box-shadow:0 20px 60px #0008;z-index:5}
+#card.show{transform:translate(-50%,-50%) scale(1);opacity:1;pointer-events:auto}
+#card h1{font-family:'Aref Ruqaa',serif;font-size:clamp(26px,6.5vw,44px);color:#d6246e;line-height:1.5;margin-bottom:14px}
+#card h1 b{color:#ff3d7f;font-size:1.25em;text-shadow:2px 2px 0 #ffe29a}
+#card p{font-size:clamp(18px,4.4vw,26px);line-height:2;margin-bottom:12px}
+#card .end{font-family:'Aref Ruqaa',serif;font-weight:700;font-size:clamp(20px,5vw,30px);color:#d6246e}
+.corner{position:absolute;font-size:clamp(22px,5vw,34px);animation:beat 1.2s infinite}
+@keyframes beat{50%{transform:scale(1.25)}}
+.b{position:fixed;bottom:-160px;width:var(--w);height:calc(var(--w)*1.25);border-radius:50% 50% 48% 48%;background:radial-gradient(circle at 32% 28%,#fff9,transparent 35%),var(--c);animation:rise var(--t) linear forwards;z-index:3;pointer-events:none}
+.b::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:60px;background:#fff6}
+@keyframes rise{to{transform:translate(var(--x),-130vh) rotate(8deg)}}
+.h{position:fixed;top:-40px;animation:fall var(--t) linear forwards;z-index:4;pointer-events:none;opacity:.85}
+@keyframes fall{to{transform:translateY(115vh) rotate(40deg)}}
+#hint{position:fixed;bottom:18px;width:100%;text-align:center;font-size:18px;opacity:.7;animation:beat 2s infinite;pointer-events:none}
+#deco{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+#bunting{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-around;padding-top:8px}
+#bunting::before{content:"";position:absolute;top:6px;left:0;right:0;height:2px;background:#ffffff66}
+#bunting i{width:0;height:0;border-left:clamp(12px,3vw,24px) solid transparent;border-right:clamp(12px,3vw,24px) solid transparent;border-top:clamp(22px,5vw,40px) solid var(--c);transform-origin:50% 0;animation:sway 3s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+.eh{position:absolute;font-size:clamp(18px,4vw,30px);animation:beat 1.4s infinite}
+.st{position:absolute;color:#ffe9a8;animation:tw 2s infinite alternate}
+@keyframes tw{from{opacity:.1;transform:scale(.6)}to{opacity:1;transform:scale(1.2)}}
+.glow{transform-box:fill-box;transform-origin:center;animation:flick .4s infinite alternate}
+.out .glow{animation:none;opacity:0;transition:.5s}
+#cake{filter:drop-shadow(0 18px 24px #0008)}
+</style>
+</head>
+<body>
+<div id="deco"></div>
+<div id="scene">
+  <div id="title">أطفأ الشمع 🕯️</div>
+  <svg id="cake" viewBox="0 0 300 290" aria-label="كيكة عيد ميلاد">
+    <defs>
+      <linearGradient id="p1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9ec0"/><stop offset="1" stop-color="#ff4f86"/></linearGradient>
+      <linearGradient id="p2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe0ec"/><stop offset="1" stop-color="#ff9ec0"/></linearGradient>
+      <linearGradient id="p3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9b3ff"/><stop offset="1" stop-color="#a66bff"/></linearGradient>
+      <linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#e0a21b"/></linearGradient>
+    </defs>
+    <ellipse cx="150" cy="270" rx="146" ry="17" fill="url(#gd)"/>
+    <ellipse cx="150" cy="266" rx="136" ry="13" fill="#fff3c9"/>
+    <rect x="25" y="190" width="250" height="76" rx="16" fill="url(#p1)"/>
+    <rect x="25" y="248" width="250" height="9" fill="url(#gd)"/>
+    <rect x="25" y="190" width="250" height="14" rx="7" fill="#fff"/>
+    <g fill="#fff"><circle cx="38" cy="205" r="10"/><circle cx="60" cy="206" r="10"/><circle cx="82" cy="205" r="10"/><circle cx="104" cy="206" r="10"/><circle cx="126" cy="205" r="10"/><circle cx="148" cy="206" r="10"/><circle cx="170" cy="205" r="10"/><circle cx="192" cy="206" r="10"/><circle cx="214" cy="205" r="10"/><circle cx="236" cy="206" r="10"/><circle cx="258" cy="205" r="10"/></g>
+    <g fill="#fff" font-size="19" text-anchor="middle" opacity=".95"><text x="55" y="236">♥</text><text x="105" y="240">♥</text><text x="150" y="236">♥</text><text x="195" y="240">♥</text><text x="245" y="236">♥</text></g>
+    <rect x="55" y="132" width="190" height="60" rx="14" fill="url(#p2)"/>
+    <rect x="55" y="132" width="190" height="12" rx="6" fill="#fff"/>
+    <g fill="#fff"><circle cx="68" cy="144" r="9"/><circle cx="90" cy="145" r="9"/><circle cx="112" cy="144" r="9"/><circle cx="134" cy="145" r="9"/><circle cx="156" cy="144" r="9"/><circle cx="178" cy="145" r="9"/><circle cx="200" cy="144" r="9"/><circle cx="222" cy="145" r="9"/><circle cx="236" cy="144" r="9"/></g>
+    <g fill="#ff4f86"><circle cx="80" cy="172" r="6"/><circle cx="120" cy="178" r="6"/><circle cx="160" cy="172" r="6"/><circle cx="200" cy="178" r="6"/><circle cx="228" cy="172" r="6"/></g>
+    <rect x="85" y="96" width="130" height="38" rx="12" fill="url(#p3)"/>
+    <rect x="85" y="96" width="130" height="11" rx="5" fill="#fff"/>
+    <g fill="#fff"><circle cx="98" cy="107" r="8"/><circle cx="118" cy="108" r="8"/><circle cx="138" cy="107" r="8"/><circle cx="158" cy="108" r="8"/><circle cx="178" cy="107" r="8"/><circle cx="198" cy="108" r="8"/></g>
+    <g fill="#ffd54f"><circle cx="105" cy="124" r="3"/><circle cx="135" cy="128" r="3"/><circle cx="165" cy="124" r="3"/><circle cx="195" cy="128" r="3"/></g>
+    <g id="candles"></g>
+  </svg>
+  <div id="hint">اضغط على الشاشة 👆</div>
+</div>
+
+<div id="card">
+  <span class="corner" style="top:10px;right:14px">💖</span><span class="corner" style="top:10px;left:14px">🎈</span>
+  <span class="corner" style="bottom:10px;right:14px">🎈</span><span class="corner" style="bottom:10px;left:14px">💖</span>
+  <h1>كل عام وأنتِ بألف خير وسعادة يا <b>سمسوم</b>! 💕</h1>
+  <p>بمناسبة عيد ميلادك السابع عشر، أسأل الله أن يكتب لكِ الفلاح والنجاح الدائم في كل خطوة تخطينها، وأن يمتلئ طريقك بالتوفيق والعزيمة. أتمنى أن تقضي باقي عمرك كله في هناء وسعادة وطمأنينة، وأن يكون هذا العام هو عيد الفرح الحقيقي الذي تبتدئ به أجمل سنين عمرك.</p>
+  <p class="end">عيد ميلاد سعيد يا سمسوم، وعقبال 100 سنة مليئة بالنجاحات والإنجازات! ✨🎂🎈</p>
+</div>
+
+<script>
+const NS='http://www.w3.org/2000/svg',g=document.getElementById('candles'),cols=['#4fc3f7','#ffd54f','#81c784','#ba68c8','#ff8a65'];
+[105,128,150,172,195].forEach((x,i)=>{
+  g.insertAdjacentHTML('beforeend',`<g><circle class="glow" cx="${x}" cy="46" r="17" fill="#ffd54f" opacity=".3"/><rect x="${x-4}" y="56" width="8" height="42" rx="2" fill="${cols[i]}"/><rect x="${x-4}" y="62" width="8" height="4" fill="#fff" opacity=".65"/><rect x="${x-4}" y="74" width="8" height="4" fill="#fff" opacity=".65"/><rect x="${x-4}" y="86" width="8" height="4" fill="#fff" opacity=".65"/><path class="smoke" d="M${x} 42q-8-10 0-18t0-16" stroke="#ddd" stroke-width="3" fill="none"/><g class="flame"><ellipse cx="${x}" cy="44" rx="5.5" ry="10" fill="#ffb300"/><ellipse cx="${x}" cy="47" rx="2.8" ry="5.5" fill="#fff59d"/></g></g>`);
+});
+const scene=document.getElementById('scene'),title=document.getElementById('title'),card=document.getElementById('card'),hint=document.getElementById('hint');
+const bc=['#ff5c8a','#f6b93b','#4fc3f7','#b388ff','#69f0ae','#ff8a65'];
+function balloon(){const e=document.createElement('div');e.className='b';
+  e.style.cssText=`left:${Math.random()*95}vw;--w:${45+Math.random()*40}px;--c:${bc[Math.random()*bc.length|0]};--t:${6+Math.random()*5}s;--x:${(Math.random()-.5)*80}px`;
+  document.body.appendChild(e);setTimeout(()=>e.remove(),11500)}
+function heart(){const e=document.createElement('div');e.className='h';e.textContent=['❤️','💖','💗','💕'][Math.random()*4|0];
+  e.style.cssText=`left:${Math.random()*95}vw;font-size:${14+Math.random()*18}px;--t:${7+Math.random()*5}s`;
+  document.body.appendChild(e);setTimeout(()=>e.remove(),12500)}
+const deco=document.getElementById('deco');
+let dh='<div id="bunting">';
+for(let i=0;i<12;i++)dh+=`<i style="--c:${bc[i%6]};animation-delay:${i*.25}s"></i>`;
+dh+='</div>';
+const em=['❤️','💖','💗','💕','🎈','🎀'];
+['left','right'].forEach(s=>{for(let i=0;i<7;i++)dh+=`<span class="eh" style="${s}:6px;top:${14+i*12}%;animation-delay:${i*.2}s">${em[(i+(s=='left'?0:3))%6]}</span>`});
+for(let i=0;i<26;i++)dh+=`<span class="st" style="left:${Math.random()*96}%;top:${8+Math.random()*88}%;font-size:${8+Math.random()*14}px;animation-delay:${Math.random()*2}s">✦</span>`;
+deco.innerHTML=dh;
+setInterval(heart,650);
+let done=false;
+scene.addEventListener('click',()=>{
+  if(done)return;done=true;hint.remove();scene.classList.add('out');
+  setTimeout(()=>{title.textContent='Happy Birthday Samsom';title.classList.add('en')},700);
+  setTimeout(()=>{for(let i=0;i<14;i++)setTimeout(balloon,i*180)},3000);
+  setTimeout(()=>{scene.classList.add('leave');card.classList.add('show');
+    setInterval(balloon,700);setInterval(heart,500)},4200);
+});
+</script>
+</body>
+</html>
